@@ -16,15 +16,17 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
-const Meta = imports.gi.Meta;
+const Main = imports.ui.main;
+const Me = imports.misc.extensionUtils.getCurrentExtension();
+const Indicator = Me.imports.indicator;
 
 function init() {
 }
 
 function enable() {
-	Meta.disable_unredirect_for_screen(global.screen);
+    Main.panel.addToStatusArea('unredirect', new Indicator.Indicator());
 }
 
 function disable() {
-	Meta.enable_unredirect_for_screen(global.screen);
+	Main.panel.statusArea.recents.disable();
 }
