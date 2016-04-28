@@ -4,8 +4,9 @@
   "name": "Unredirect Fullscreen Window", 
   "shell-version": [
     "3.16",
-    "3.18"
+    "3.18",
+    "3.20"
   ], 
   "uuid": "unredirect-fullscreen@leonardo.bartoli.gmail.com", 
-  "version": 1
+  "version": 3
 }
